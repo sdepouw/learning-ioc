@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="DependencyResolverInstance.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="NinjectModuleResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,7 +57,7 @@
       <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\DatabaseDependency\DatabaseDependency.csproj">
-      <Project>{91405276-BF10-4B66-A346-8515D6EA90D6}</Project>
+      <Project>{91405276-bf10-4b66-a346-8515d6ea90d6}</Project>
       <Name>DatabaseDependency</Name>
     </ProjectReference>
     <ProjectReference Include="..\PaymentGatewayDependency\PaymentGatewayDependency.csproj">
