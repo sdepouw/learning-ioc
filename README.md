@@ -5,9 +5,9 @@ Playing around with Ninject in various scenarios.
 
 ## The flow of dependencies
 
-* `Core` depends on nothing.
-* `Dependency projects` (SQL, PayPal, etc.) depend on `Core` (for interface/contract definitions).
-* `DependencyResolution` depends on `Core` (for interfaces), `Dependency projects` (for implementation), and `Ninject` (to wire up IoC)
+* `Core` depends on **nothing**. This is a good thing!
+* `*Dependency` projects (SQL, PayPal, etc.) depend on `Core` (for interface/contract definitions).
+* `DependencyResolution` depends on `Core` (for interfaces), `*Dependency` (for implementation), and `Ninject` (via NuGet, to wire up IoC).
 * `UI Projects` (Console, Web Forms, MVC, etc.) depend on `Core` (for interfaces) and `DependencyResolution` (to initialize IoC and retrieve instances of interfaces).
 
 
