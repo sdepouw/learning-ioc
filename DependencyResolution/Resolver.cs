@@ -3,17 +3,17 @@
 namespace LearningNinject.DependencyResolution
 {
     // Maintains our resolver instance. Implementation details (i.e. the fact that we're using Ninject) is encapsulated.
-    public static class DependencyResolverInstance
+    public static class Resolver
     {
-        private static IResolver _resolver;
-        public static IResolver Resolver
+        private static IResolver _instance;
+        public static IResolver Instance
         {
             get
             {
                 // Only set up the resolver once.
-                if (_resolver != null)
+                if (_instance != null)
                 {
-                    return _resolver;
+                    return _instance;
                 }
 
                 // Load Ninject's resolver up.
@@ -22,8 +22,8 @@ namespace LearningNinject.DependencyResolution
                 kernel.Load(resolver);
 
                 // Store resolver (in this case, Ninject's Kernel), and return.
-                _resolver = resolver;
-                return _resolver;
+                _instance = resolver;
+                return _instance;
             }
         }
     }

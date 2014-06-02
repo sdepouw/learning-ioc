@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolverInstance.cs" />
+    <Compile Include="Resolver.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="NinjectModuleResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
