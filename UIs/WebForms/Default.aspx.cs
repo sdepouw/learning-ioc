@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using LearningNinject.Core.Interfaces.External;
+using LearningNinject.DependencyResolution;
 
 namespace WebForms
 {
@@ -11,7 +9,8 @@ namespace WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var widgetRepository = DependencyResolver.Resolver.Resolve<IWidgetRepository>();
+            WidgetsLabel.Text = string.Join(", ", widgetRepository.FetchWidgets());
         }
     }
 }

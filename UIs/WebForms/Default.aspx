@@ -38,5 +38,8 @@
             </p>
         </div>
     </div>
-
+    <h2>My Widgets!</h2>
+    <div>
+        <asp:Label runat="server" ID="WidgetsLabel" />
+    </div>
 </asp:Content>
