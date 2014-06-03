@@ -15,16 +15,20 @@ namespace LearningNinject.DependencyResolution
                 {
                     return _instance;
                 }
-
-                // Load Ninject's resolver up.
-                var resolver = new NinjectModuleResolver();
-                var kernel = new StandardKernel();
-                kernel.Load(resolver);
-
+   
                 // Store resolver (in this case, Ninject's Kernel), and return.
-                _instance = resolver;
+                _instance = Initialize();
                 return _instance;
             }
+        }
+
+        private static NinjectModuleResolver Initialize()
+        {
+            // Load Ninject's resolver up.
+            var resolver = new NinjectModuleResolver();
+            var kernel = new StandardKernel();
+            kernel.Load(resolver);
+            return resolver;
         }
     }
 }
