@@ -10,7 +10,7 @@ namespace LearningNinject.DependencyResolution
 {
     internal class NinjectModuleResolver : NinjectModule, IResolver
     {
-        public TAbstractType Resolve<TAbstractType>()
+        public TAbstractType Get<TAbstractType>()
         {
             return Kernel.Get<TAbstractType>();
         }

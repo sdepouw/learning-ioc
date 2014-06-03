@@ -5,8 +5,13 @@ namespace LearningNinject.DependencyResolution
     // Maintains our resolver instance. Implementation details (i.e. the fact that we're using Ninject) is encapsulated.
     public static class Resolver
     {
+        public static T Get<T>()
+        {
+            return Instance.Get<T>();
+        }
+
         private static IResolver _instance;
-        public static IResolver Instance
+        private static IResolver Instance
         {
             get
             {

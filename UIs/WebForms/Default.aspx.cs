@@ -9,7 +9,7 @@ namespace WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var widgetRepository = Resolver.Instance.Resolve<IWidgetRepository>();
+            var widgetRepository = Resolver.Get<IWidgetRepository>();
             WidgetsLabel.Text = string.Join(", ", widgetRepository.FetchWidgets());
         }
     }

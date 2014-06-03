@@ -7,7 +7,7 @@ namespace LearningNinject.Console
     {
         public static void Main()
         {
-            var myApplication = Resolver.Instance.Resolve<IMyApplication>();
+            var myApplication = Resolver.Get<IMyApplication>();
             myApplication.Run();
         }
     }

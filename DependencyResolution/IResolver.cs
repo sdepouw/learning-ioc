@@ -2,6 +2,6 @@
 {
     public interface IResolver
     {
-        TAbstractType Resolve<TAbstractType>();
+        TAbstractType Get<TAbstractType>();
     }
 }
