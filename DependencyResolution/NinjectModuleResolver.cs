@@ -23,7 +23,19 @@ namespace LearningNinject.DependencyResolution
 
             // Binding to extenral dependencies.
             Bind<IPaymentService>().To<PayPalPaymentService>();
-            Bind<IWidgetRepository>().To<SqlWidgetRepository>();
+            BindRepositoryWithCache<IWidgetRepository, SqlWidgetRepository, CachedWidgetRepository>();
+        }
+
+        // In normal circumstances, use the cached repository.
+        // Inside the cached repository class, we need the real repository.
+        // Consumer does not have to worry, still calls Resolver.Get<TInterface>().
+        // Real repository does not have to be concerned about caching logic.
+        private void BindRepositoryWithCache<TInterface, TRepository, TCachedRepository>() 
+            where TRepository : TInterface
+            where TCachedRepository : TInterface
+        {
+            Bind<TInterface>().To<TRepository>().WhenInjectedExactlyInto<TCachedRepository>();
+            Bind<TInterface>().To<TCachedRepository>();
         }
     }
 }
