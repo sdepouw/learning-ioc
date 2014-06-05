@@ -5,6 +5,9 @@ Playing around with Ninject in various scenarios.
 
 ## The flow of dependencies
 
+![Dependencies](dependencies.jpg "Dependencies")
+
+
 * `Core` depends on **nothing**. This is a good thing!
 * `*Dependency` projects (SQL, PayPal, etc.) depend on `Core` (for interface/contract definitions).
 * `DependencyResolution` depends on `Core` (for interfaces), `*Dependency` (for implementation), and `Ninject` (via NuGet, to wire up IoC).
