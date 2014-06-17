@@ -8,7 +8,7 @@ using Ninject.Modules;
 
 namespace LearningNinject.DependencyResolution
 {
-    internal class NinjectModuleResolver : NinjectModule, IResolver
+    internal class NinjectExplicitResolver : NinjectModule, IResolver
     {
         public TAbstractType Get<TAbstractType>()
         {

@@ -1,23 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 using LearningNinject.Core;
 using LearningNinject.Core.Interfaces;
 using LearningNinject.Core.Interfaces.External;
 using LearningNinject.DatabaseDependency;
 using LearningNinject.PaymentGatewayDependency;
-using Ninject;
 using Ninject.Extensions.Conventions;
-using Ninject.Modules;
 
 namespace LearningNinject.DependencyResolution
 {
-    internal class NinjectModuleConventionResolver : NinjectModule, IResolver
+    internal class NinjectConventionResolver : NinjectResolver
     {
-        public TAbstractType Get<TAbstractType>()
-        {
-            return Kernel.Get<TAbstractType>();
-        }
-
         public override void Load()
         {
             // TODO: Better way to obtain desired assemblies?

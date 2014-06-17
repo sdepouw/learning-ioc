@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NinjectModuleConventionResolver.cs" />
+    <Compile Include="NinjectConventionResolver.cs" />
     <Compile Include="NinjectModuleExtensions.cs" />
+    <Compile Include="NinjectResolver.cs" />
     <Compile Include="Resolver.cs" />
     <Compile Include="IResolver.cs" />
-    <Compile Include="NinjectModuleResolver.cs" />
+    <Compile Include="NinjectExplicitResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
