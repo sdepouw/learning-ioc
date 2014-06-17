@@ -20,18 +20,17 @@ namespace LearningNinject.DependencyResolution
 
         public override void Load()
         {
-            // Select all assemblies containing interfaces and implementations.
-            var assemblies = new List<Assembly>
-            {
-                // TODO: Better way to obtain desired assemblies?
-                Assembly.GetAssembly(typeof (IBusinessLogic)),
-                Assembly.GetAssembly(typeof (SqlWidgetRepository)),
-                Assembly.GetAssembly(typeof (PayPalPaymentService)),
-            };
+            // TODO: Better way to obtain desired assemblies?
+            Assembly coreAssembly = Assembly.GetAssembly(typeof (IBusinessLogic));
+            Assembly databaseDependencyAssembly = Assembly.GetAssembly(typeof (SqlWidgetRepository));
+            Assembly paymentGatewayAssembly = Assembly.GetAssembly(typeof (PayPalPaymentService));
             
-            // Bind all interfaces to implementations, excluding special case where one interface has multiple implementations.
-            Kernel.Bind(x => x.From(assemblies).SelectAllClasses()
+            Kernel.Bind(x => 
+                // Select all classes from assemblies containing our interfaces and implementations
+                x.From(coreAssembly, databaseDependencyAssembly, paymentGatewayAssembly).SelectAllClasses()
+                // Exclude the types involved with special-case bindings
                 .Excluding(typeof(IWidgetRepository), typeof(SqlWidgetRepository), typeof(CachedWidgetRepository))
+                // Bind all the located interfaces to their implementations
                 .BindAllInterfaces());
             this.BindRepositoryWithCache<IWidgetRepository, SqlWidgetRepository, CachedWidgetRepository>();
         }
