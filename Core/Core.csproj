@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic.cs" />
+    <Compile Include="CachedRepository.cs" />
     <Compile Include="CachedWidgetRepository.cs" />
     <Compile Include="Exceptions\BusinessLogicValidationFailedException.cs" />
     <Compile Include="Interfaces\IMyApplication.cs" />

@@ -1,4 +1,5 @@
-﻿using Ninject.Modules;
+﻿using System;
+using Ninject.Modules;
 
 namespace LearningNinject.DependencyResolution
 {
@@ -16,6 +17,12 @@ namespace LearningNinject.DependencyResolution
         {
             ninjectModule.Bind<TInterface>().To<TRepository>().WhenInjectedExactlyInto<TCachedRepository>();
             ninjectModule.Bind<TInterface>().To<TCachedRepository>();
+        }
+
+        internal static void BindRepositoryWithCache(this NinjectModule ninjectModule, Type interfaceType, Type repositoryType, Type cachedRepositoryType)
+        {
+            ninjectModule.Bind(interfaceType).To(repositoryType).WhenInjectedExactlyInto(cachedRepositoryType);
+            ninjectModule.Bind(interfaceType).To(cachedRepositoryType);
         }
     }
 }

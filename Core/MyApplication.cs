@@ -28,6 +28,8 @@ namespace LearningNinject.Core
             List<string> widgets = widgetRepository.FetchWidgets();
 
             gizmoRepository.Get();
+            gizmoRepository.Get();
+            gizmoRepository.Get();
 
             paymentService.MakePaymentForWidget(widgets.First());
         }

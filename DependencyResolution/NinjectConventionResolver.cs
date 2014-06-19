@@ -22,8 +22,11 @@ namespace LearningNinject.DependencyResolution
                 x.From(coreAssembly, databaseDependencyAssembly, paymentGatewayAssembly).SelectAllClasses()
                 // Exclude the types involved with special-case bindings
                 .Excluding(typeof(IWidgetRepository), typeof(SqlWidgetRepository), typeof(CachedWidgetRepository))
+                .Excluding(typeof(IRepository<>), typeof(SqlRepository<>), typeof(CachedRepository<>))
                 // Bind all the located interfaces to their implementations
                 .BindAllInterfaces());
+
+            this.BindRepositoryWithCache(typeof(IRepository<>), typeof(SqlRepository<>), typeof(CachedRepository<>));
             this.BindRepositoryWithCache<IWidgetRepository, SqlWidgetRepository, CachedWidgetRepository>();
         }
     }
