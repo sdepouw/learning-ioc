@@ -20,6 +20,7 @@ namespace LearningNinject.DependencyResolution
             // Binding to core classes.
             Bind<IMyApplication>().To<MyApplication>();
             Bind<IBusinessLogic>().To<BusinessLogic>();
+            Bind(typeof (IRepository<>)).To(typeof(SqlRepository<>));
 
             // Binding to extenral dependencies.
             Bind<IPaymentService>().To<PayPalPaymentService>();

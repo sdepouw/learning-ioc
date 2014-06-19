@@ -2,6 +2,7 @@
 using System.Linq;
 using LearningNinject.Core.Interfaces;
 using LearningNinject.Core.Interfaces.External;
+using LearningNinject.Core.Model;
 
 namespace LearningNinject.Core
 {
@@ -9,12 +10,14 @@ namespace LearningNinject.Core
     {
         private readonly IBusinessLogic businessLogic;
         private readonly IWidgetRepository widgetRepository;
+        private readonly IRepository<Gizmo> gizmoRepository; 
         private readonly IPaymentService paymentService;
 
-        public MyApplication(IBusinessLogic businessLogic, IWidgetRepository widgetRepository, IPaymentService paymentService)
+        public MyApplication(IBusinessLogic businessLogic, IWidgetRepository widgetRepository, IRepository<Gizmo> gizmoRepository, IPaymentService paymentService)
         {
             this.businessLogic = businessLogic;
             this.widgetRepository = widgetRepository;
+            this.gizmoRepository = gizmoRepository;
             this.paymentService = paymentService;
         }
 
@@ -23,7 +26,9 @@ namespace LearningNinject.Core
             businessLogic.Validate();
             
             List<string> widgets = widgetRepository.FetchWidgets();
-            
+
+            gizmoRepository.Get();
+
             paymentService.MakePaymentForWidget(widgets.First());
         }
     }

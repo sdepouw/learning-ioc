@@ -47,6 +47,8 @@
     <Compile Include="Interfaces\IBusinessLogic.cs" />
     <Compile Include="Interfaces\External\IPaymentService.cs" />
     <Compile Include="Interfaces\External\IWidgetRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Model\Gizmo.cs" />
     <Compile Include="MyApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
