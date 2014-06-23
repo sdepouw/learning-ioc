@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearningNinject.Core.Exceptions;
-using LearningNinject.Core.Interfaces;
-using LearningNinject.Core.Interfaces.External;
+using LearningIoC.Core.Exceptions;
+using LearningIoC.Core.Interfaces;
+using LearningIoC.Core.Interfaces.External;
 
-namespace LearningNinject.Core
+namespace LearningIoC.Core
 {
     public class BusinessLogic : IBusinessLogic
     {

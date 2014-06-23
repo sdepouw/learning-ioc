@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LearningNinject.Core.Interfaces.External
+namespace LearningIoC.Core.Interfaces.External
 {
     public interface IWidgetRepository
     {

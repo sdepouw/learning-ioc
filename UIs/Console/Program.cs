@@ -1,5 +1,5 @@
-﻿using LearningIoC.DependencyResolution;
-using LearningNinject.Core.Interfaces;
+﻿using LearningIoC.Core.Interfaces;
+using LearningIoC.DependencyResolution;
 
 namespace LearningIoC.Console
 {

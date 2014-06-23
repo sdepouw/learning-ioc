@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using LearningNinject.Core.Interfaces.External;
+using LearningIoC.Core.Interfaces.External;
 
-namespace LearningNinject.DatabaseDependency
+namespace LearningIoC.DatabaseDependency
 {
     public class SqlWidgetRepository : IWidgetRepository
     {

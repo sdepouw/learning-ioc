@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using LearningNinject.Core;
-using LearningNinject.Core.Interfaces;
-using LearningNinject.Core.Interfaces.External;
-using LearningNinject.DatabaseDependency;
-using LearningNinject.PaymentGatewayDependency;
+using LearningIoC.Core;
+using LearningIoC.Core.Interfaces;
+using LearningIoC.Core.Interfaces.External;
+using LearningIoC.DatabaseDependency;
+using LearningIoC.PaymentGatewayDependency;
 using Ninject.Extensions.Conventions;
 
 namespace LearningIoC.DependencyResolution.Resolvers

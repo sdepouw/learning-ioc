@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearningNinject.Core.Exceptions
+namespace LearningIoC.Core.Exceptions
 {
     public class BusinessLogicValidationFailedException : Exception
     {

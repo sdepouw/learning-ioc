@@ -1,7 +1,7 @@
 ﻿using System;
-using LearningNinject.Core.Interfaces.External;
+using LearningIoC.Core.Interfaces.External;
 
-namespace LearningNinject.PaymentGatewayDependency
+namespace LearningIoC.PaymentGatewayDependency
 {
     public class PayPalPaymentService : IPaymentService
     {

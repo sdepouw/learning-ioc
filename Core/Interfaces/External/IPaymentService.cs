@@ -1,4 +1,4 @@
-﻿namespace LearningNinject.Core.Interfaces.External
+﻿namespace LearningIoC.Core.Interfaces.External
 {
     public interface IPaymentService
     {

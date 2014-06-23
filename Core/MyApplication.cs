@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LearningNinject.Core.Interfaces;
-using LearningNinject.Core.Interfaces.External;
-using LearningNinject.Core.Model;
+using LearningIoC.Core.Interfaces;
+using LearningIoC.Core.Interfaces.External;
+using LearningIoC.Core.Model;
 
-namespace LearningNinject.Core
+namespace LearningIoC.Core
 {
     public class MyApplication : IMyApplication
     {

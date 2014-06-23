@@ -1,7 +1,7 @@
 ﻿using System;
-using LearningNinject.Core.Interfaces;
+using LearningIoC.Core.Interfaces;
 
-namespace LearningNinject.DatabaseDependency
+namespace LearningIoC.DatabaseDependency
 {
     public class SqlRepository<T> : IRepository<T>
         where T : new()

@@ -1,4 +1,4 @@
-﻿namespace LearningNinject.Core.Model
+﻿namespace LearningIoC.Core.Model
 {
     public class Gizmo
     {

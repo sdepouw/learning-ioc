@@ -1,4 +1,4 @@
-﻿namespace LearningNinject.Core.Interfaces
+﻿namespace LearningIoC.Core.Interfaces
 {
     public interface IRepository<T>
     {

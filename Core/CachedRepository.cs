@@ -1,7 +1,7 @@
 ﻿using System;
-using LearningNinject.Core.Interfaces;
+using LearningIoC.Core.Interfaces;
 
-namespace LearningNinject.Core
+namespace LearningIoC.Core
 {
     public class CachedRepository<T> : IRepository<T>
         where T : class
