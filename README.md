@@ -1,7 +1,7 @@
-learning-ninject
+Learning IoC
 ================
 
-Playing around with Ninject in various scenarios.
+Playing around with various IoC containers in various scenarios.
 
 ## The flow of dependencies
 
