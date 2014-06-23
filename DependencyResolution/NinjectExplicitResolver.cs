@@ -3,18 +3,11 @@ using LearningNinject.Core.Interfaces;
 using LearningNinject.Core.Interfaces.External;
 using LearningNinject.DatabaseDependency;
 using LearningNinject.PaymentGatewayDependency;
-using Ninject;
-using Ninject.Modules;
 
 namespace LearningNinject.DependencyResolution
 {
-    internal class NinjectExplicitResolver : NinjectModule, IResolver
+    internal class NinjectExplicitResolver : NinjectResolver
     {
-        public TAbstractType Get<TAbstractType>()
-        {
-            return Kernel.Get<TAbstractType>();
-        }
-
         public override void Load()
         {
             // Binding to core classes.

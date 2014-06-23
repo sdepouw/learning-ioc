@@ -22,18 +22,10 @@ namespace LearningNinject.DependencyResolution
                 }
    
                 // Store resolver (in this case, Ninject's Kernel), and return.
-                _instance = Initialize();
+                _instance = new UnityResolver();
+                _instance.Initialize();
                 return _instance;
             }
-        }
-
-        private static IResolver Initialize()
-        {
-            // Load Ninject's resolver up.
-            var resolver = new NinjectConventionResolver();
-            var kernel = new StandardKernel();
-            kernel.Load(resolver);
-            return resolver;
         }
     }
 }

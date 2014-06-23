@@ -3,5 +3,6 @@
     public interface IResolver
     {
         TAbstractType Get<TAbstractType>();
+        void Initialize();
     }
 }

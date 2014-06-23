@@ -9,5 +9,11 @@ namespace LearningNinject.DependencyResolution
         {
             return Kernel.Get<TAbstractType>();
         }
+
+        public void Initialize()
+        {
+            var kernel = new StandardKernel();
+            kernel.Load(this);
+        }
     }
 }
