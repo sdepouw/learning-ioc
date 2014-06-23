@@ -19,11 +19,8 @@ namespace LearningIoC.DependencyResolution.Resolvers
 
         public void Initialize()
         {
-            // Binding to core classes.
             container.RegisterType<IMyApplication, MyApplication>();
             container.RegisterType<IBusinessLogic, BusinessLogic>();
-
-            // Binding to extenral dependencies.
             container.RegisterType<IPaymentService, PayPalPaymentService>();
             container.RegisterType<IWidgetRepository, CachedWidgetRepository>(new InjectionMember[] { new InjectionConstructor(new SqlWidgetRepository()) });
 

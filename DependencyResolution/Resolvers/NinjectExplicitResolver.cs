@@ -10,12 +10,8 @@ namespace LearningIoC.DependencyResolution.Resolvers
     {
         public override void Load()
         {
-            // Binding to core classes.
             Bind<IMyApplication>().To<MyApplication>();
             Bind<IBusinessLogic>().To<BusinessLogic>();
-            
-
-            // Binding to extenral dependencies.
             Bind<IPaymentService>().To<PayPalPaymentService>();
             this.BindRepositoryWithCache(typeof(IRepository<>), typeof(SqlRepository<>), typeof(CachedRepository<>));
             this.BindRepositoryWithCache<IWidgetRepository, SqlWidgetRepository, CachedWidgetRepository>();
