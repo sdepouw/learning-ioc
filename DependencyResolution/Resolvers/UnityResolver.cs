@@ -29,5 +29,7 @@ namespace LearningIoC.DependencyResolution.Resolvers
             // TODO: Figure out how to use cached repository pattern with generic repository in Unity.
             container.RegisterType(typeof(IRepository<>), typeof(SqlRepository<>));
         }
+
+        public string ResolverName { get { return "Unity"; } }
     }
 }

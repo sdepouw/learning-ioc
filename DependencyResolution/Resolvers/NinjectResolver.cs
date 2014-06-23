@@ -15,5 +15,7 @@ namespace LearningIoC.DependencyResolution.Resolvers
             var kernel = new StandardKernel();
             kernel.Load(this);
         }
+
+        public abstract string ResolverName { get; }
     }
 }

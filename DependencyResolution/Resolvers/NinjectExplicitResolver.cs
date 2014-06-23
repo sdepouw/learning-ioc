@@ -20,5 +20,7 @@ namespace LearningIoC.DependencyResolution.Resolvers
             this.BindRepositoryWithCache(typeof(IRepository<>), typeof(SqlRepository<>), typeof(CachedRepository<>));
             this.BindRepositoryWithCache<IWidgetRepository, SqlWidgetRepository, CachedWidgetRepository>();
         }
+
+        public override string ResolverName { get { return "Ninject (explicit)"; } }
     }
 }

@@ -7,8 +7,8 @@ namespace MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IWidgetRepository widgetRepository = Resolver.Get<IWidgetRepository>();
-        private readonly IPaymentService paymentService = Resolver.Get<IPaymentService>();
+        private readonly IWidgetRepository widgetRepository = Resolver.Instance.Get<IWidgetRepository>();
+        private readonly IPaymentService paymentService = Resolver.Instance.Get<IPaymentService>();
 
         public ActionResult Index()
         {

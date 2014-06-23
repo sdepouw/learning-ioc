@@ -5,13 +5,8 @@ namespace LearningIoC.DependencyResolution
     // Maintains our resolver instance. Implementation details (i.e. the fact that we're using Ninject) is encapsulated.
     public static class Resolver
     {
-        public static TAbstractType Get<TAbstractType>()
-        {
-            return Instance.Get<TAbstractType>();
-        }
-
         private static IResolver _instance;
-        private static IResolver Instance
+        public static IResolver Instance
         {
             get
             {

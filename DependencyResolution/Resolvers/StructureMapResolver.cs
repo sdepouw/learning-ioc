@@ -30,5 +30,7 @@ namespace LearningIoC.DependencyResolution.Resolvers
                 x.For(typeof (IRepository<>)).Use(typeof(SqlRepository<>));
             });
         }
+
+        public string ResolverName { get { return "StructureMap"; } }
     }
 }

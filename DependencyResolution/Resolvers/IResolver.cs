@@ -4,5 +4,6 @@
     {
         TAbstractType Get<TAbstractType>();
         void Initialize();
+        string ResolverName { get; }
     }
 }

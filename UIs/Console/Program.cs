@@ -1,4 +1,5 @@
-﻿using LearningIoC.Core.Interfaces;
+﻿using System;
+using LearningIoC.Core.Interfaces;
 using LearningIoC.DependencyResolution;
 
 namespace LearningIoC.Console
@@ -7,7 +8,8 @@ namespace LearningIoC.Console
     {
         public static void Main()
         {
-            var myApplication = Resolver.Get<IMyApplication>();
+            System.Console.WriteLine("Using IoC container: {0}{1}", Resolver.Instance.ResolverName, Environment.NewLine);
+            var myApplication = Resolver.Instance.Get<IMyApplication>();
             myApplication.Run();
         }
     }
