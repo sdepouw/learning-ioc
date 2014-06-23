@@ -1,7 +1,7 @@
-﻿using LearningNinject.Core.Interfaces;
-using LearningNinject.DependencyResolution;
+﻿using LearningIoC.DependencyResolution;
+using LearningNinject.Core.Interfaces;
 
-namespace LearningNinject.Console
+namespace LearningIoC.Console
 {
     public static class Program
     {

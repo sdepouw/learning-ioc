@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
+using LearningIoC.DependencyResolution;
 using LearningNinject.Core.Interfaces.External;
-using LearningNinject.DependencyResolution;
 
 namespace WebForms
 {

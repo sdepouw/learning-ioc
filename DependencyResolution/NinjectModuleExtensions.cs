@@ -1,7 +1,7 @@
 ﻿using System;
 using Ninject.Modules;
 
-namespace LearningNinject.DependencyResolution
+namespace LearningIoC.DependencyResolution
 {
     internal static class NinjectModuleExtensions
     {

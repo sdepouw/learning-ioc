@@ -1,7 +1,7 @@
 ﻿using Ninject;
 using Ninject.Modules;
 
-namespace LearningNinject.DependencyResolution.Resolvers
+namespace LearningIoC.DependencyResolution.Resolvers
 {
     internal abstract class NinjectResolver : NinjectModule, IResolver
     {

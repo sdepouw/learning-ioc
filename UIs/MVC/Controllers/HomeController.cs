@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using LearningIoC.DependencyResolution;
 using LearningNinject.Core.Interfaces.External;
-using LearningNinject.DependencyResolution;
 
 namespace MVC.Controllers
 {

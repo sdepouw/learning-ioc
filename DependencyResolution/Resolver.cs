@@ -1,6 +1,6 @@
-﻿using LearningNinject.DependencyResolution.Resolvers;
+﻿using LearningIoC.DependencyResolution.Resolvers;
 
-namespace LearningNinject.DependencyResolution
+namespace LearningIoC.DependencyResolution
 {
     // Maintains our resolver instance. Implementation details (i.e. the fact that we're using Ninject) is encapsulated.
     public static class Resolver

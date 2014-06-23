@@ -1,4 +1,4 @@
-﻿namespace LearningNinject.DependencyResolution.Resolvers
+﻿namespace LearningIoC.DependencyResolution.Resolvers
 {
     public interface IResolver
     {
