@@ -6,7 +6,7 @@ using LearningNinject.DatabaseDependency;
 using LearningNinject.PaymentGatewayDependency;
 using Ninject.Extensions.Conventions;
 
-namespace LearningNinject.DependencyResolution
+namespace LearningNinject.DependencyResolution.Resolvers
 {
     internal class NinjectConventionResolver : NinjectResolver
     {

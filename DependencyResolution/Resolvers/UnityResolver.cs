@@ -5,7 +5,7 @@ using LearningNinject.DatabaseDependency;
 using LearningNinject.PaymentGatewayDependency;
 using Microsoft.Practices.Unity;
 
-namespace LearningNinject.DependencyResolution
+namespace LearningNinject.DependencyResolution.Resolvers
 {
     internal class UnityResolver : IResolver
     {

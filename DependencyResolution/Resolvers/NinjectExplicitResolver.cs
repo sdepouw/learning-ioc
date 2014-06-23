@@ -4,7 +4,7 @@ using LearningNinject.Core.Interfaces.External;
 using LearningNinject.DatabaseDependency;
 using LearningNinject.PaymentGatewayDependency;
 
-namespace LearningNinject.DependencyResolution
+namespace LearningNinject.DependencyResolution.Resolvers
 {
     internal class NinjectExplicitResolver : NinjectResolver
     {

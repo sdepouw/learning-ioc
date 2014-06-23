@@ -1,4 +1,4 @@
-﻿using Ninject;
+﻿using LearningNinject.DependencyResolution.Resolvers;
 
 namespace LearningNinject.DependencyResolution
 {
