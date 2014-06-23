@@ -21,8 +21,8 @@ namespace LearningIoC.DependencyResolution
                     return _instance;
                 }
    
-                // Store resolver (in this case, Ninject's Kernel), and return.
-                _instance = new UnityResolver();
+                // Store resolver and return.
+                _instance = new StructureMapResolver();
                 _instance.Initialize();
                 return _instance;
             }
