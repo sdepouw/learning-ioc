@@ -34,9 +34,7 @@ namespace LearningIoC.DependencyResolution.Resolvers
                 return cachedRepoType;
             });
 
-            // Register our fancy reflection-loving function for IRepository<>
             container.RegisterType(typeof(IRepository<>), typeof(CachedRepository<>), new InjectionMember[] { cachedRepositoryFactory });
-
         }
 
         public string ResolverName { get { return "Unity"; } }
