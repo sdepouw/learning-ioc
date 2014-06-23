@@ -7,8 +7,8 @@
     <ProjectGuid>{91405276-BF10-4B66-A346-8515D6EA90D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearningNinject.DatabaseDependency</RootNamespace>
-    <AssemblyName>LearningNinject.DatabaseDependency</AssemblyName>
+    <RootNamespace>LearningIoC.DatabaseDependency</RootNamespace>
+    <AssemblyName>LearningIoC.DatabaseDependency</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

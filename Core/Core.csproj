@@ -7,8 +7,8 @@
     <ProjectGuid>{222E7DAA-BD46-457F-AEB4-C64795E66EDB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearningNinject.Core</RootNamespace>
-    <AssemblyName>LearningNinject.Core</AssemblyName>
+    <RootNamespace>LearningIoC.Core</RootNamespace>
+    <AssemblyName>LearningIoC.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{C621B89F-D69E-4C90-ACAF-022B5B33FBE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearningNinject.PaymentGatewayDependency</RootNamespace>
-    <AssemblyName>LearningNinject.PaymentGatewayDependency</AssemblyName>
+    <RootNamespace>LearningIoC.PaymentGatewayDependency</RootNamespace>
+    <AssemblyName>LearningIoC.PaymentGatewayDependency</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
