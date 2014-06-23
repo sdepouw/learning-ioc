@@ -24,8 +24,10 @@ namespace LearningIoC.DependencyResolution.Resolvers
                 x.For<IBusinessLogic>().Use<BusinessLogic>();
                 x.For<IPaymentService>().Use<PayPalPaymentService>();
 
-                x.For<IWidgetRepository>().Use<SqlWidgetRepository>();
-                x.For(typeof (IRepository<>)).Use(typeof (SqlRepository<>));
+                x.For<IWidgetRepository>().Use<CachedWidgetRepository>().Ctor<IWidgetRepository>().Is<SqlWidgetRepository>();
+                
+                // TODO: How to use cached repo here? (Ctor<> method does not have an overload without generics)
+                x.For(typeof (IRepository<>)).Use(typeof(SqlRepository<>));
             });
         }
     }
