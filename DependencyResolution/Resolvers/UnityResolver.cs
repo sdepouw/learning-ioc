@@ -1,7 +1,7 @@
-﻿using LearningIoC.Core;
+﻿using System;
+using LearningIoC.Core;
 using LearningIoC.Core.Interfaces;
 using LearningIoC.Core.Interfaces.External;
-using LearningIoC.Core.Model;
 using LearningIoC.DatabaseDependency;
 using LearningIoC.PaymentGatewayDependency;
 using Microsoft.Practices.Unity;
@@ -24,9 +24,19 @@ namespace LearningIoC.DependencyResolution.Resolvers
             container.RegisterType<IPaymentService, PayPalPaymentService>();
             container.RegisterType<IWidgetRepository, CachedWidgetRepository>(new InjectionMember[] { new InjectionConstructor(new SqlWidgetRepository()) });
 
-            // TODO: Figure out how to use cached repository pattern with generic repository in Unity.
-            container.RegisterType<IRepository<Gizmo>, CachedRepository<Gizmo>>(new InjectionMember[] { new InjectionConstructor(new SqlRepository<Gizmo>()) });
-            //container.RegisterType(typeof(IRepository<>), typeof(SqlRepository<>));
+            // http://stackoverflow.com/a/24374652/100534
+            var cachedRepositoryFactory = new InjectionFactory((ctr, type, str) =>
+            {
+                var genericType = type.GenericTypeArguments[0];
+                var sqlRepoType = typeof(SqlRepository<>).MakeGenericType(genericType);
+                var sqlRepoInstance = Activator.CreateInstance(sqlRepoType);
+                var cachedRepoType = Activator.CreateInstance(type, sqlRepoInstance);
+                return cachedRepoType;
+            });
+
+            // Register our fancy reflection-loving function for IRepository<>
+            container.RegisterType(typeof(IRepository<>), typeof(CachedRepository<>), new InjectionMember[] { cachedRepositoryFactory });
+
         }
 
         public string ResolverName { get { return "Unity"; } }
