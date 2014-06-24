@@ -2,7 +2,7 @@
 
 namespace LearningIoC.DependencyResolution
 {
-    // Maintains our resolver instance. Implementation details (i.e. the fact that we're using Ninject) is encapsulated.
+    // Maintains our resolver instance. Implementation details are encapsulated.
     public static class Resolver
     {
         private static IResolver _instance;
